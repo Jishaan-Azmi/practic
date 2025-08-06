@@ -1,0 +1,370 @@
+*{
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+}
+
+body{
+      font-family:sans-serif;
+      background-color: rgb(0, 0, 0);
+      color: rgb(255, 255, 255);
+      min-height: 100vh;
+      line-height: 1.5;
+      overflow-x:hidden;
+}
+
+.image-gradient{
+      position:absolute;
+      top: 0;
+      right: 0;
+      opacity: 0.5;
+      z-index:-1;
+}
+
+.layer-blur{
+      height: 0;
+      width: 30rem;
+        position: absolute;
+        top: 20%;
+        right: 0;
+        box-shadow:  0 0 700px 15px white;
+        transform: rotate(-30deg);
+        z-index:-1; 
+}
+
+.container{
+      width:100%;
+      margin: 0 auto;
+      padding: 0 2rem;
+      position: relative;
+      overflow: hidden;
+
+}
+
+header{
+      display: flex;
+       justify-content: space-between;
+       align-items: center;
+       padding:1rem 5rem;
+       z-index: 999;
+}
+
+header h1{
+        margin: 0;
+        font-size: 3rem;
+        font-weight: 300;
+}
+
+nav{
+      display: flex;
+      align-items: center;
+      gap: 3rem;
+      margin-left: -5%;
+}
+
+nav a{
+      font-size: 1rem;
+      letter-spacing: 0.1rem;
+      transition: color 0.2s ease;
+      text-decoration: none;
+      color: inherit;
+}
+
+.nav_tag a:hover{
+      color: #a7a7a7;
+}
+
+.Sign_Up{
+      background-color: #a7a7a7;
+      color: black;
+      padding: 0.8rem 2rem;
+      border-radius: 60px;
+      border: none;
+      font-size: 1rem;
+      font-weight: 500;
+      transition: background-color 0.2s ease;
+      cursor: pointer;
+}
+ 
+.Sign_Up:hover{
+      background-color: white;
+}
+
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 2rem;
+  color: white;
+  cursor: pointer;
+}
+
+main{
+      display: flex;
+      flex-direction:column;
+      justify-content: center;
+      min-height: calc(90vh - 6rem);
+
+
+}
+
+.content{
+      max-width: 40rem;
+       margin-left:10%;
+      z-index: 999;
+}
+
+.tag-box{
+      position: relative;
+      width: 18rem;
+      height: 2.5rem;
+      border-radius: 50px;
+      background: linear-gradient(to right , #656565 ,#7f4287 ,#5300a0 , #757575, #656565);
+      background-size: 200%;
+      animation: animationGradient 2.5s linear infinite;
+      box-shadow: 0 0 15px rgba(255,255,255,0.3);
+      
+}
+
+@keyframes animationGradient{
+      to{
+            background-position: 200%;
+      }
+}
+
+.tag-box .tag{
+      position: absolute;
+      inset: 3px 3px 3px 3px;
+      background-color: black;
+      border-radius:15px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: 0.5s ease;
+      cursor: pointer;
+}
+
+.tag-box .tag:hover{
+      color: #5300a0;
+}
+
+.content h1{
+      font-size: 4rem;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      margin: 2rem 0;
+      line-height: 1.2;
+      text-shadow:  0 0 10px rgbs(128 , 128 ,128,0.418);
+
+}
+
+.Desc{
+      font-size: 1.2rem;
+      letter-spacing:0.05em;
+      max-width:100%;
+      padding: 0px 10px;
+      color: gray;
+}
+
+.buttons{
+      display:flex;
+      gap: 1rem;
+      margin-top: 3rem;
+
+}
+
+.btn-get-started{
+      text-decoration: none;
+      border: 1px solid #2a2a2a;
+      padding: 0.7rem 1.2rem; 
+      border-radius: 50px;
+      font-size: 1.2rem;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      transition: background-color 0.2s ease;
+}
+
+.btn-get-started:hover{ 
+      color: #b04f17;
+}
+.btn-signing-main{
+      background-color: #1a1a1a;
+}
+
+.btn-signing-main {
+      text-decoration: none;
+      background-color: lightgray;
+      color: black;
+      padding: 0.6rem 2.5rem;
+      border-radius: 50px;
+      font-size: 1.2rem;
+      font-weight: 600;
+      letter-spacing:0.1em;
+      transition: background-color 0.2s ease;
+}
+
+.btn-signing-main {
+      background-color: gray;
+}
+
+.robot_3D{
+      position: absolute;
+      top:0px;
+      right: -30%;
+}
+.robot_3D #container #logo {
+       width: 0px;
+       color: black;
+}
+
+
+@media(max-width:575px){
+      .header h1{
+            width:50px;
+            padding:10px 20px;
+            font-size: 22px;
+      }
+      .Sign_Up{
+            padding: 0px 10px;
+            margin: 0px 20px;
+            font-size:12px;
+            height: 30px;
+            width: 75   px;
+      }
+      .tag-box{
+            font-size: smaller;
+            width: 11rem;
+      }     
+      
+      .robot_3D{
+            /*top: 30px;*/top: 1%;
+            height: 400px;
+            right: -2%;
+      }
+      .main_heading{
+            top:34px;
+            font-size:26px;
+      }
+      .content{
+            margin-top: 800px;
+      }
+
+      .Desc{
+            font-size:14px;
+      }
+      .btn-get-started{
+            font-size: 0.8rem;
+            padding:  0.6rem 1rem;
+      }
+      .btn-signing-main{
+            font-size: 0.6rem;
+            padding:  0.6rem 1rem;
+      }
+}
+
+
+    /*MOBILE RESPONSIVE*/
+
+     @media (max-width:768px){
+      header{
+            padding: 1rem 0.1rem;
+      }
+
+      nav{
+            display: none;
+      }
+      .content{
+            margin-top: 60%;
+      }
+      .content h1{
+            font-size: 2.5rem;
+      }
+      header h1{
+            font-size: 2rem;
+            padding:20px;
+      }
+      .Sign_Up{
+            margin: 10px;
+      }
+      .content .tag-box{
+            font-size: 16px;
+            width: 12rem;
+      }
+      .robot_3D{
+            right: 1%;
+            margin-top: 1px;
+            height: 200px;
+
+      }
+      .Desc{
+            font-size: 1rem;
+      }
+      .btn-get-started{
+            font-size: 0.8rem;
+            padding:  0.8rem 1.2rem;
+      }
+      .btn-signing-main{
+            font-size: 0.8rem;
+            padding:  0.8rem 1.2rem;
+      }
+     }
+
+@media (max-width:991px){
+      .content{
+            margin-top:600px;
+      }
+
+      .robot_3D{
+            top: -20%;
+            left: -1%;
+            /*margin-top: 100px;*/
+      }
+}
+/*@media(max-width:1199px){
+      .header h1 {
+            padding: 10px;
+      }
+
+      .robot_3D{
+            margin-top: 100px;
+      }
+}
+
+/*TABLET RESPONSIVE*/
+
+ @media (max-width: 1200px) {
+      header{
+        padding: 1rem 0.5rem;
+      }
+      .content{
+            /*margin-top:100%;*/
+      }
+      .content h1{
+            font-size: 50px;
+      }
+      .robot_3D{
+            top:-10%;
+            right: -25%;
+            scale: 0.8;
+            height:800px;
+      }
+    }
+
+
+/*TABLET RESPONSIVE*/
+
+ @media(max-width: 1300px) {
+      header{
+        padding: 1rem 0.5rem;
+      }
+      .content{
+            margin-top:100%;
+      }
+      .robot_3D{
+            top: -5%;
+            right: 2%;
+            scale: 0.8;
+      }
+    }
+
+
